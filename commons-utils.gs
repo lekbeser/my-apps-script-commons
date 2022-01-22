@@ -2,7 +2,7 @@
  * Commons.
  */
 function kbesIsTrue(str) {
-  return str && /(true|on)/i.test(str);
+  return str && /(true|on|yes)/i.test(str);
 }
 
 /**
