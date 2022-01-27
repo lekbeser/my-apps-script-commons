@@ -41,4 +41,13 @@ function kbesFormatPrice(val) {
   return (part1 + part2).replace(/\s/gi, '\xA0'); // solid
 }
 
+/**
+ * Label text templating.
+ */
+function kbesTmpl(templateText, params){
+    return templateText.replace(/%(\w+)%/g, function(m, key){
+          return params.hasOwnProperty(key) ? params[key] : '';
+    });
+}
+
 /** end. */
